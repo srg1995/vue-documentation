@@ -54,14 +54,18 @@ const handleUsers = () => {
 
   <h2>v-for</h2>
   <table border="1">
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-    </tr>
-    <tr v-for="user in users" :key="user.name">
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="user in users" :key="user.name">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
   </table>
 
   <h2>v-model</h2>
@@ -70,6 +74,11 @@ const handleUsers = () => {
     <input type="text" v-model="email" placeholder="email" />
     <button @click.prevent="handleUsers">Añadir usuario</button>
   </form>
+
+  <h2>v-custom</h2>
+  <h2 v-font-size-unique="15">Directiva personalizada con el value</h2>
+  <h2 v-custom-size:sm>Directiva personalizada con los arg</h2>
+  <h2 v-custom-font.sm.blue>Directiva personalizada con los midofiers</h2>
 </template>
 
 <style scoped>
