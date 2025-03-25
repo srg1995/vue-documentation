@@ -1,7 +1,13 @@
-<script lang="ts" setup></script>
+<script lang="js" setup>
+import MainLayout from '@/layouts/MainLayout.vue'
+</script>
 
 <template>
-  <h1 class="text-3xl font-bold underline text-center">Home View</h1>
+  <MainLayout>
+    <template v-slot:section>
+      <h1 class="text-3xl font-bold underline text-center text-gray-500">Home View</h1>
+    </template>
+  </MainLayout>
 </template>
 
 <style scoped></style>
