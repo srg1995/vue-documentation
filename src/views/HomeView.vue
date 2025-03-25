@@ -10,4 +10,3 @@ import MainLayout from '@/layouts/MainLayout.vue'
   </MainLayout>
 </template>
 
-<style scoped></style>
