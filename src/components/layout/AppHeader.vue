@@ -4,7 +4,6 @@ const isAuthenticated = !!useUserStore().user.token
 </script>
 
 <template>
-  {{ isAuthenticated }}
   <header className="h-[10vh] p-4 text-center">
     <div className="flex justify-center align-bottom h-full">
       <nav class="shadow-md p-4 flex items-center justify-center m-4">
