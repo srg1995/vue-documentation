@@ -19,15 +19,21 @@ const changeLanguage = (event) => {
     <div className="flex justify-between align-bottom h-full my-4">
       <nav class="shadow-md p-4 flex items-center justify-center m-4">
         <div class="m-1 p-2 cursor-pointer">
-          <router-link to="/"> {{ $t('message.HEADER_MENU1') }}</router-link>
+          <router-link class="text-green-600 hover:text-green-300 hover:underline p-4" to="/">
+            {{ $t('message.HEADER_MENU1') }}</router-link
+          >
         </div>
         <div v-if="isAuthenticated">|</div>
         <div class="m-1 p-2 cursor-pointer" v-if="isAuthenticated">
-          <router-link to="/about"> {{ $t('message.HEADER_MENU2') }}</router-link>
+          <router-link class="text-green-600 hover:text-green-300 hover:underline p-4" to="/about">
+            {{ $t('message.HEADER_MENU2') }}</router-link
+          >
         </div>
         <div v-if="!isAuthenticated">|</div>
         <div class="m-1 p-2 cursor-pointer" v-if="!isAuthenticated">
-          <router-link to="/login"> {{ $t('message.HEADER_MENU3') }}</router-link>
+          <router-link class="text-green-400 hover:text-green-800 hover:underline p-4" to="/login">
+            {{ $t('message.HEADER_MENU3') }}</router-link
+          >
         </div>
       </nav>
       <div>
