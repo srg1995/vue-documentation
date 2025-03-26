@@ -6,10 +6,8 @@ const year = date.getFullYear()
 <template>
   <footer className="h-[10vh] bg-gray-800 text-white p-4 text-center  bottom-0 w-full">
     <div className="container mx-auto">
-      <p className="text-lg font-semibold">
-        {{ year }} - Desarrollado por Sergio Sacrist&aacute;n Santero
-      </p>
-      <p className="text-sm mt-2">Gracias por visitar nuestro sitio web. ¡Vuelve pronto!</p>
+      <p className="text-lg font-semibold">{{ year }} - {{ $t('message.FOOTER_TEXT1') }}</p>
+      <p className="text-sm mt-2">{{ $t('message.FOOTER_TEXT2') }}</p>
       <div className="mt-4">
         <a
           href="https://www.linkedin.com/in/sergio-sacrist%C3%A1n-santero-31b750a5/"
@@ -17,7 +15,7 @@ const year = date.getFullYear()
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline mx-2"
         >
-          LinkedIn
+          {{ $t('message.LINK_LINKEDIN') }}
         </a>
         <a
           href="https://github.com/srg1995"
@@ -25,7 +23,7 @@ const year = date.getFullYear()
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline mx-2"
         >
-          GitHub
+          {{ $t('message.LINK_GITHUB') }}
         </a>
       </div>
     </div>

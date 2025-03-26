@@ -21,13 +21,15 @@ const handleLogin = async () => {
     <template v-slot:section>
       <div class="flex justify-center">
         <form class="w-1/2 mx-auto">
-          <h2 class="text-2xl font-bold text-center text-gray-900 m-4">Login</h2>
+          <h2 class="text-2xl font-bold text-center text-gray-900 m-4">
+            {{ $t('message.LOGIN_TEXT') }}
+          </h2>
           <div class="space-y-12">
             <div class="pb-4">
               <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div class="sm:col-span-12">
-                  <label for="username" class="block text-sm/6 font-medium text-gray-900"
-                    >Usuario</label
+                  <label for="username" class="block text-sm/6 font-medium text-gray-900">
+                    {{ $t('message.USER_TEXT') }}</label
                   >
                   <div class="mt-2">
                     <div
@@ -47,8 +49,8 @@ const handleLogin = async () => {
               </div>
               <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div class="sm:col-span-12">
-                  <label for="username" class="block text-sm/6 font-medium text-gray-900"
-                    >Contraseña</label
+                  <label for="username" class="block text-sm/6 font-medium text-gray-900">
+                    {{ $t('message.PASSWORD_TEXT') }}</label
                   >
                   <div class="mt-2">
                     <div
@@ -74,7 +76,7 @@ const handleLogin = async () => {
               class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               @click.prevent="handleLogin"
             >
-              Accede
+              {{ $t('message.LOGIN_BUTTON') }}
             </button>
           </div>
         </form>
