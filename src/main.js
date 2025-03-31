@@ -6,11 +6,17 @@ import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { messages } from './lang/messages'
 import { createI18n } from 'vue-i18n'
+import { OhVueIcon, addIcons } from 'oh-vue-icons'
+
+import { CoHome, CoPeople } from 'oh-vue-icons/icons'
+import {} from 'oh-vue-icons/icons'
 
 const app = createApp(App)
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
+
+addIcons(CoHome, CoPeople)
 
 const i18n = createI18n({
   locale: localStorage.getItem('locale') || 'es',
@@ -22,5 +28,6 @@ const i18n = createI18n({
 app.use(pinia)
 app.use(router)
 app.use(i18n)
+app.component('VIcon', OhVueIcon)
 
 app.mount('#app')

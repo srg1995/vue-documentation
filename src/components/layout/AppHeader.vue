@@ -20,12 +20,14 @@ const changeLanguage = (event) => {
       <nav class="shadow-md p-4 flex items-center justify-center m-4">
         <div class="m-1 p-2 cursor-pointer">
           <router-link class="text-green-600 hover:text-green-300 hover:underline p-4" to="/">
+            <VIcon name="co-home" class="text-4xl" />
             {{ $t('message.HEADER_MENU1') }}</router-link
           >
         </div>
         <div v-if="isAuthenticated">|</div>
         <div class="m-1 p-2 cursor-pointer" v-if="isAuthenticated">
           <router-link class="text-green-600 hover:text-green-300 hover:underline p-4" to="/about">
+            <VIcon name="co-people" class="text-4xl" />
             {{ $t('message.HEADER_MENU2') }}</router-link
           >
         </div>
@@ -38,8 +40,12 @@ const changeLanguage = (event) => {
       </nav>
       <div>
         <select id="language" @change="changeLanguage($event)" class="p-2 border rounded">
-          <option value="en" :selected="locale === 'en'">{{ $t('message.HEADER_LANG1') }}</option>
-          <option value="es" :selected="locale === 'es'">{{ $t('message.HEADER_LANG2') }}</option>
+          <option value="en" :selected="locale === 'en'">
+            🇬🇧 {{ $t('message.HEADER_LANG1') }}
+          </option>
+          <option value="es" :selected="locale === 'es'">
+            🇪🇸 {{ $t('message.HEADER_LANG2') }}
+          </option>
         </select>
       </div>
     </div>
