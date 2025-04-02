@@ -23,7 +23,6 @@ export const useUserStore = defineStore('user', {
     async login({ email, password }) {
       const response = await getUser(email, password)
       if (response.status === 200) {
-        console.log(response.data)
         this.user = response.data
         router.push({ name: 'about' })
       } else {
